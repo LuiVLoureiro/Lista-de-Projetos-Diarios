@@ -1,11 +1,3 @@
-Abaixo está um **README.md** pronto (para a raiz do repositório) e **12 mini-READMEs** (um por dia, 20/08 a 31/08) no mesmo estilo do *Pulse*, porém **simplificados** e com foco em **NumPy, Pandas, Matplotlib, Estatística e SQLAlchemy/SQLite**.
-Coloque cada mini-README dentro da respectiva pasta (ex.: `20-08-2025/README.md`).
-Cada projeto fica **em uma branch própria** e depois todos são *mergeados* para `main`.
-
----
-
-# README (raiz do repositório)
-
 ## Projetos Diários — 19/08 a 31/08
 
 Série de 13 micro-projetos em Python (um por dia) para treinar **ETL (CSV → SQLite via SQLAlchemy), análise com Pandas/NumPy, gráficos com Matplotlib** e **estatística descritiva**.
