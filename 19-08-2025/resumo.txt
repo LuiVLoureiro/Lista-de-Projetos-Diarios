@@ -1,0 +1,6 @@
+Pulse: Analisador de Sessões de Foco & Produtividade
+Ideia (visão geral)
+
+Você registra sessões curtas do dia a dia (estudo, trabalho, lazer técnico), com atributos simples (início/fim, foco, humor, interrupções, temperatura/ambiente, cafeína, sono da noite anterior).
+O app faz ETL → armazenamento em SQLite (SQLAlchemy) → análises com Pandas/NumPy → gráficos com Matplotlib.
+Objetivo: descobrir quando e em quais condições seu foco rende mais (por hora do dia, dia da semana e contexto).
