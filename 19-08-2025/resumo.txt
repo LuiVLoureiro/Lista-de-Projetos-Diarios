@@ -1,6 +1,9 @@
-Pulse: Analisador de Sessões de Foco & Produtividade
-Ideia (visão geral)
+Arcadezinho: Leaderboard de Jogos Rápidos
+Ideia (1 parágrafo)
 
-Você registra sessões curtas do dia a dia (estudo, trabalho, lazer técnico), com atributos simples (início/fim, foco, humor, interrupções, temperatura/ambiente, cafeína, sono da noite anterior).
-O app faz ETL → armazenamento em SQLite (SQLAlchemy) → análises com Pandas/NumPy → gráficos com Matplotlib.
-Objetivo: descobrir quando e em quais condições seu foco rende mais (por hora do dia, dia da semana e contexto).
+Você registra pontuações de mini-jogos rápidos (ex.: Dado, Reflexo, Memória). 
+Cada “partida” é uma linha com jogador, jogo, hora e score. 
+Você armazena no SQLite (via SQLAlchemy), 
+analisa com Pandas/NumPy métricas simples (médias, desvios, percentis, z-score) 
+e plota 2–3 gráficos com Matplotlib (top jogadores, distribuição de scores, evolução diária). 
+É um projeto de 1 arquivo CSV + 1 tabela no banco + 3 gráficos.
