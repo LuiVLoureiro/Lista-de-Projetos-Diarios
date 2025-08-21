@@ -36,9 +36,9 @@ class Criar():
                 fim    = inicio + np.timedelta64(23, "h") + np.timedelta64(59, "m") + np.timedelta64(59, "s")
                 rng = np.random.default_rng()
                 span = int((fim - inicio) / np.timedelta64(1, "s"))
-                offs = rng.integers(0, span, size=1)
-                ts = inicio + offs.astype("timedelta64[s]")
-                iso = np.datetime_as_string(ts, unit="s")
+                offs = int(rng.integers(0, span))
+                ts = inicio + np.timedelta64(offs, "s")
+                iso = pd.Timestamp(ts).isoformat(timespec="seconds")
                 for i in range(np.random.randint(3, 6)): # De 3 a 6 partidas por jogador alternando entre os jogos
                     # Escolher Jogo
                     jogo = np.random.choice(jogos)
@@ -55,7 +55,7 @@ class Criar():
                         'score': [score]
                         })
 
-                    df.to_csv(arquivo, mode="a", index=False, header=not arquivo)
+                    df.to_csv(arquivo, mode="a", index=False, header=not arquivo, encoding="utf-8")
 
 
     def jogo_reflexo(self):
