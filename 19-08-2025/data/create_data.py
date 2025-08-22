@@ -16,9 +16,9 @@ class Criar():
                 'score': [],
             })
             df.to_csv(f"{dir_atual}/arcade.csv", index=False)
-            print(f"sucess: Criação do arcade.csv foi feita com sucesso")
-        except:
-            print(f"error: Erro na Criação do Arquivo arcade.csv")
+            print("sucess: Criação do arcade.csv foi feita com sucesso")
+        except:  # noqa: E722
+            print("error: Erro na Criação do Arquivo arcade.csv")
 
         nomes = ["Ana", "Bruno", "Carlos", "Daniela", "Eduardo"]
         jogos = ["Reflexo", "Memória"]
