@@ -1,0 +1,23 @@
+Ideia. Registrar copos de água e horários para entender padrão de hidratação.
+
+Esquema (tabela única).
+
+coluna	tipo	descrição
+id	INTEGER	PK
+ts	DATETIME	data/hora do consumo
+ml	INTEGER	volume em mililitros (>0)
+contexto	TEXT	manhã/tarde/noite/pós-treino, etc.
+ETL. data.csv → Pandas (valida ml>0, parse ts) → SQLite via SQLAlchemy.
+
+Análises & Métricas.
+
+Total diário e média por faixa horária.
+Distribuição de volumes (hist).
+Correlação simples: nº de eventos × total diário (NumPy).
+Visualizações.
+
+Barras: consumo por hora do dia.
+Linha: acumulado diário (curva de hidratação).
+Entregáveis.
+
+hydra.db, 2 gráficos .png, breve conclusão (melhor janela do dia).
